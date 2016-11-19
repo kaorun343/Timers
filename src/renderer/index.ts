@@ -2,20 +2,34 @@ require('./style.scss')
 import * as Vue from 'vue'
 import { Component } from 'vue-property-decorator'
 
+import Modal from './modal'
 import Timer from './timer'
 import * as template from './index.vue.html'
 
+interface TimerData {
+  start: number
+  end: number
+}
+
 @Component(template({
-  components: { Timer }
+  components: { Modal, Timer: Timer }
 }))
 class App extends Vue {
 
-  timers: { start: number, end: number }[] = []
+  timers: TimerData[] = []
 
-  add() {
-    const start = (new Date()).getTime()
-    const end = (new Date()).getTime() + 1000 * 60 * 1.5
+  $refs: {
+    modal: Modal
+  }
 
+  openModal() {
+    console.log('clicked')
+    const { modal } = this.$refs
+    modal.create()
+    modal.show = true
+  }
+
+  submit({ start, end }: TimerData) {
     this.timers.push({ start, end })
   }
 

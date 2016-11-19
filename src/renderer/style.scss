@@ -7,6 +7,7 @@ $base-selection-background: transparent;
 @import "~uikit/dist/scss/core/button.scss";
 @import "~uikit/dist/scss/core/form.scss";
 @import "~uikit/dist/scss/core/grid.scss";
+@import "~uikit/dist/scss/core/modal.scss";
 @import "~uikit/dist/scss/core/navbar.scss";
 @import "~uikit/dist/scss/core/panel.scss";
 @import "~uikit/dist/scss/core/text.scss";
@@ -51,4 +52,13 @@ input, button, textarea, :focus {
 .time {
   height: 30px;
   padding: 3px 0;
+}
+
+.uk-modal {
+  display: flex;
+
+  &-dialog {
+    flex: 1;
+    margin: auto;
+  }
 }
