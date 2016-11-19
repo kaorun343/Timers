@@ -1,0 +1,54 @@
+@import "~uikit/dist/scss/uikit-mixins.scss";
+@import "~uikit/dist/scss/uikit-variables.scss";
+
+$base-selection-background: transparent;
+
+@import "~uikit/dist/scss/core/base.scss";
+@import "~uikit/dist/scss/core/button.scss";
+@import "~uikit/dist/scss/core/form.scss";
+@import "~uikit/dist/scss/core/grid.scss";
+@import "~uikit/dist/scss/core/navbar.scss";
+@import "~uikit/dist/scss/core/panel.scss";
+@import "~uikit/dist/scss/core/text.scss";
+@import "~uikit/dist/scss/core/utility.scss";
+
+@import "~uikit/dist/scss/components/progress.scss";
+
+html, body, #app {
+  height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.uk-navbar {
+  -webkit-app-region: drag;
+}
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+input, button, textarea, :focus {
+    outline: none; // You should add some other style for :focus to help UX/a11y
+}
+
+.timers {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.timer {
+  margin: 20px 0;
+}
+
+.time {
+  height: 30px;
+  padding: 3px 0;
+}

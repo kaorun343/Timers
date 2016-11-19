@@ -1,0 +1,15 @@
+<div class="timer uk-panel uk-panel-box uk-panel-box-primary" @contextmenu="contextmenu($event)">
+  <div class="uk-form">
+    <div class="uk-grid">
+      <div class="uk-width-3-4">
+        <input type="text" v-model="title" placeholder="タイマーの説明" class="uk-width-1-1">
+      </div>
+      <div class="uk-width-1-4">
+        <div class="time uk-text-large">{{ time }}</div>
+      </div>
+    </div>
+    <div class="uk-progress uk-progress-small">
+      <div class="uk-progress-bar" :style="{width: range}"></div>
+    </div>
+  </div>
+</div>
