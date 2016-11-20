@@ -1,7 +1,35 @@
 @import "~uikit/dist/scss/uikit-mixins.scss";
 @import "~uikit/dist/scss/uikit-variables.scss";
 
+$dark-primary-color: #FFA000;
+$primary-color: #FFC107;
+$light-primary-color: #FFECB3;
+$accent-color: #2196F3;
+$primary-text: #212121;
+$secondary-text: #757575;
+$divider-color: #BDBDBD;
+
 $base-selection-background: transparent;
+
+$button-primary-background: $dark-primary-color;
+$button-primary-hover-background: $primary-color;
+$button-primary-active-background: $primary-color;
+
+$form-focus-background: $light-primary-color;
+
+@mixin hook-modal-header {
+  h2 {
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+$navbar-background: $accent-color;
+$navbar-color: #FFF;
+
+$panel-box-primary-background: $accent-color;
+$panel-box-primary-color: #FFF;
+
+$progress-bar-background: $primary-color;
 
 @import "~uikit/dist/scss/core/base.scss";
 @import "~uikit/dist/scss/core/button.scss";
