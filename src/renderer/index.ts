@@ -23,7 +23,6 @@ class App extends Vue {
   }
 
   openModal() {
-    console.log('clicked')
     const { modal } = this.$refs
     modal.create()
     modal.show = true
